@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --bg: #454545;
+    --menuBg: #FF6000;
+    --fontColor: #FFE6C7;
+
+}
+
+main {
+    padding-left: 3rem;
+}
+
+nav.leftMenu {
+    background-color: var(--menuBg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -90px;
+
+    transition: left 500ms ease-in-out;
+}
+
+nav.leftMenu .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    color: var(--fontColor);
+    background-color: var(--bg);
+
+}
+
+nav.leftMenu .title label i {
+    padding: 10px 5px;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+}
+
+nav.leftMenu ul {
+    list-style: none;
+    padding: 20px 50px 0 20px;
+    line-height: 30px;
+}
+
+nav.leftMenu ul li a {
+    text-decoration: none;
+    color: var(--fontColor);
+    display: block;
+
+    transition: transform 500ms ease-in-out;
+}
+
+nav.leftMenu ul li a:hover {
+    color: #fff;
+    transform: translateX(10px);
+
+}
+
+
+.chk-menu {
+    display: none;
+}
+
+.chk-menu:checked+nav {
+    left: 0;
+}
+
+.chk-menu:checked+nav .title label i {
+    transform: rotate(180deg);
+}
